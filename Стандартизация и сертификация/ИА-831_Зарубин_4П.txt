@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "math.h"
+
+
+
+void roty(double a, double matr[3][3])
+{
+    matr[0][0] = cos(a);
+    matr[0][1] = 0;
+    matr[0][2] = -sin(a);
+
+    matr[1][0] = 0;
+    matr[1][1] = 1;
+    matr[1][2] = 0;
+
+    matr[2][0] = sin(a);
+    matr[2][1] = 0;
+    matr[2][2] = cos(a);
+
+    
+    return;
+}
+
+
+int main(){
+
+
+int i,j;
+double A[3][3];
+for (i = 0; i < 3; i++ ) {
+for (j = 0; j < 3; j++ ) {
+    A[i][j] = 1;
+    printf("%f ",**A);
+    }
+puts("\n");
+}
+puts("\n\n");
+  roty(30, A); 
+    for (i = 0; i < 3; i++ ) {
+      for (j = 0; j < 3; j++ ) {
+            printf("%f ",A[i][j]);
+      }
+    puts("\n");
+    }
+    puts("\n\n"); 
+}

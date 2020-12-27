@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include<locale.h>
+#include<stdlib.h>
+
+MatO(float x, int n, int *a, float b)
+{
+  printf("Массив (x):\n");  
+  for ( int i = 1; i <= n; i++)
+    {
+        a[i] = rand() % 51-20;
+        printf("x = %d \n", a[i]);
+        x += a[i] * b;
+    }
+    return x;
+}
+
+int main()
+{
+setlocale(0, "rus");
+int n;
+printf("Введите количество (x): ");
+scanf("%d", &n);
+int a[n];
+float x=0;
+float b=1.0/n;
+x=MatO(x,n,a,b);
+printf("Получаем:\n");
+printf("M = %.2f\n", x);
+getchar();
+return 0;
+}
